@@ -44,6 +44,6 @@
   
   <div>
     <p>Output:</p>
-    <div class=static><i>{generateMarkupText(inputText) ?? ""}</i></div>
+    <div class=static><i>{generateMarkupText(inputText)}</i></div>
   </div>
 </span>

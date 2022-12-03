@@ -2,8 +2,6 @@
   import Interpreter from "./Interpreter.svelte";
 </script>
 
-<link rel="stylesheet" href="node_modules/svelte-material-ui/bare.css" />
-
 <style>
   main {
     display:flex;
