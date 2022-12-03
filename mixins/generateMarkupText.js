@@ -18,7 +18,22 @@ const spells = [
   "thunderwave",
 ];
 
-const conditions = ["charmed", "frightened", "restrained", "incapacitated"];
+const conditions = [
+  "charmed",
+  "frightened",
+  "restrained",
+  "incapacitated",
+  "grappled",
+  "invisible",
+  "paralyzed",
+  "petrified",
+  "poisoned",
+  "prone",
+  "stunned",
+  "unconscious",
+  "blinded",
+  "deafened",
+];
 const weapons = {
   piercing: ["dagger", "rapier"],
   slashing: ["longsword", "greatsword", "handaxe", "battleaxe", "greataxe"],
