@@ -1,5 +1,5 @@
 <script>
-  import Interpreter from "./Interpreter.svelte";
+  import Generator from "./Generator.svelte";
 </script>
 
 <style>
@@ -45,7 +45,7 @@
     </div>
 
     <div>
-      <Interpreter />
+      <Generator />
     </div>
   </span>
   

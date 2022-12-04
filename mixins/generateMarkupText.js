@@ -1,45 +1,4 @@
-const spells = [
-  "light",
-  "sacred flame",
-  "thaumaturgy",
-  "command",
-  "mage hand",
-  "mending",
-  "fire bolt",
-  "absorb elements",
-  "catapult",
-  "fireball",
-  "flame arrows",
-  "grease",
-  "haste",
-  "heat metal",
-  "scorching ray",
-  "shield",
-  "thunderwave",
-];
-
-const conditions = [
-  "charmed",
-  "frightened",
-  "restrained",
-  "incapacitated",
-  "grappled",
-  "invisible",
-  "paralyzed",
-  "petrified",
-  "poisoned",
-  "prone",
-  "stunned",
-  "unconscious",
-  "blinded",
-  "deafened",
-];
-const weapons = {
-  piercing: ["dagger", "rapier"],
-  slashing: ["longsword", "greatsword", "handaxe", "battleaxe", "greataxe"],
-  bludgeoning: ["light hammer", "mace", "warhammer", "maul"],
-  magic: ["spellcasting"],
-};
+import keywords from "./keywords";
 
 const generateMarkupText = (input) => {
   const elements = input.match(/\w+|\s+|[^\s\w]+/g);
@@ -56,24 +15,24 @@ const generateMarkupText = (input) => {
           skipNext--;
         } else {
           // conditions
-          if (conditions.includes(element)) {
+          if (keywords.conditions.includes(element)) {
             return `[condition]${element}[/condition]`;
           }
 
           // spells
-          if (spells.includes(element)) {
+          if (keywords.spells.includes(element)) {
             return `[spell]${element}[/spell]`;
           }
 
           // spells with multiple words
-          if (spells.includes(element + " " + elements[index + 2])) {
+          if (keywords.spells.includes(element + " " + elements[index + 2])) {
             skipNext = 2;
             return `[spell]${element + " " + elements[index + 2]}[/spell]`;
           }
 
           // set weapon and damage type for the next attack roll
-          for (let type in weapons) {
-            if (weapons[type].includes(element.toLowerCase())) {
+          for (let type in keywords.weapons) {
+            if (keywords.weapons[type].includes(element.toLowerCase())) {
               currentWeapon = element;
               currentDamageType = type;
               return element;
