@@ -38,7 +38,7 @@
   }
 
   .signature {
-    margin-top: 40px;
+    margin-top: 39px;
   }
 
   span {
