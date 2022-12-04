@@ -20,7 +20,7 @@
 
   h1 {
     color: #C3073F;
-    
+    font-size: xx-large;
   }
 
   .header-box {
@@ -28,6 +28,17 @@
     flex-direction: column;
     margin-top: 25px;
     margin-bottom: 25px;
+  }
+
+  .title-box {
+    display: flex;
+    flex-direction: row;
+    font-size: smaller;
+    gap: 10px;
+  }
+
+  .signature {
+    margin-top: 40px;
   }
 
   span {
@@ -40,7 +51,10 @@
 <main>
   <span class=main-container>
     <div class=header-box>
-        <h1>BEYONDER</h1>
+        <div class=title-box>
+          <h1>BEYONDER</h1> <div class=signature>by Arsalan B. M. (function_argument)</div>
+        </div>
+        
         <div>Automatically adds markup for dice rolls, as well as for spell/condition references.</div>
     </div>
 
