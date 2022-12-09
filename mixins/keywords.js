@@ -1,549 +1,541 @@
-// Scraped from DnDBeyond using Power Automate Desktop
-const spellString = `Abi-Dalzim’s Horrid Wilting
-Absorb Elements
-Acid Arrow
-Acid Splash
-Aganazzar’s Scorcher
-Aid
-Air Bubble
-Alarm
-Alter Self
-Animal Friendship
-Animal Messenger
-Animal Shapes
-Animate Dead
-Animate Objects
-Antilife Shell
-Antimagic Field
-Antipathy/Sympathy
-Arcane Eye
-Arcane Gate
-Arcane Hand
-Arcane Lock
-Arcanist's Magic Aura
-Armor of Agathys
-Arms of Hadar
-Ashardalon’s Stride
-Astral Projection
-Augury
-Aura of Life
-Aura of Purity
-Aura of Vitality
-Awaken
-Bane
-Banishing Smite
-Banishment
-Barkskin
-Beacon of Hope
-Beast Bond
-Beast Sense
-Bestow Curse
-Bigby's Hand
-Black Tentacles
-Blade Barrier
-Blade of Disaster
-Blade Ward
-Bless
-Blight
-Blinding Smite
-Blindness/Deafness
-Blink
-Blur
-Bones of the Earth
-Booming Blade
-Borrowed Knowledge
-Branding Smite
-Burning Hands
-Call Lightning
-Calm Emotions
-Catapult
-Catnap
-Cause Fear
-Ceremony
-Chain Lightning
-Chaos Bolt
-Charm Monster
-Charm Person
-Chill Touch
-Chromatic Orb
-Circle of Death
-Circle of Power
-Clairvoyance
-Clone
-Cloud of Daggers
-Cloudkill
-Color Spray
-Command
-Commune
-Commune with Nature
-Compelled Duel
-Comprehend Languages
-Compulsion
-Cone of Cold
-Confusion
-Conjure Animals
-Conjure Barrage
-Conjure Celestial
-Conjure Elemental
-Conjure Fey
-Conjure Minor Elementals
-Conjure Volley
-Conjure Woodland Beings
-Contact Other Plane
-Contagion
-Contingency
-Continual Flame
-Control Flames
-Control Water
-Control Weather
-Control Winds
-Cordon of Arrows
-Counterspell
-Create Bonfire
-Create Food and Water
-Create Homunculus
-Create Magen
-Create or Destroy Water
-Create Spelljamming Helm
-Create Undead
-Creation
-Crown of Madness
-Crown of Stars
-Crusader’s Mantle
-Cure Wounds
-Dancing Lights
-Danse Macabre
-Dark Star
-Darkness
-Darkvision
-Dawn
-Daylight
-Death Ward
-Delayed Blast Fireball
-Demiplane
-Destructive Wave
-Detect Evil and Good
-Detect Magic
-Detect Poison and Disease
-Detect Thoughts
-Dimension Door
-Disguise Self
-Disintegrate
-Dispel Evil and Good
-Dispel Magic
-Dissonant Whispers
-Distort Value
-Divination
-Divine Favor
-Divine Word
-Dominate Beast
-Dominate Monster
-Dominate Person
-Draconic Transformation
-Dragon's Breath
-Drawmij's Instant Summons
-Dream
-Dream of the Blue Veil
-Druid Grove
-Druidcraft
-Dust Devil
-Earth Tremor
-Earthbind
-Earthquake
-Eldritch Blast
-Elemental Bane
-Elemental Weapon
-Encode Thoughts
-Enemies Abound
-Enervation
-Enhance Ability
-Enlarge/Reduce
-Ensnaring Strike
-Entangle
-Enthrall
-Erupting Earth
-Etherealness
-Evard’s Black Tentacles
-Expeditious Retreat
-Eyebite
-Fabricate
-Faerie Fire
-Faithful Hound
-False Life
-Far Step
-Fast Friends
-Fear
-Feather Fall
-Feeblemind
-Feign Death
-Find Familiar
-Find Greater Steed
-Find Steed
-Find the Path
-Find Traps
-Finger of Death
-Fire Bolt
-Fire Shield
-Fire Storm
-Fireball
-Fizban's Platinum Shield
-Flame Arrows
-Flame Blade
-Flame Strike
-Flaming Sphere
-Flesh to Stone
-Floating Disk
-Flock of Familiars
-Fly
-Fog Cloud
-Forbiddance
-Forcecage
-Foresight
-Fortune's Favor
-Freedom of Movement
-Freedom of the Waves
-Freedom of the Winds
-Freezing Sphere
-Friends
-Frost Fingers
-Frostbite
-Galder’s Speedy Courier
-Galder’s Tower
-Gaseous Form
-Gate
-Geas
-Gentle Repose
-Giant Insect
-Gift of Alacrity
-Gift of Gab
-Glibness
-Globe of Invulnerability
-Glyph of Warding
-Goodberry
-Grasping Vine
-Gravity Fissure
-Gravity Sinkhole
-Grease
-Greater Invisibility
-Greater Restoration
-Green-Flame Blade
-Guardian of Faith
-Guardian of Nature
-Guards and Wards
-Guidance
-Guiding Bolt
-Gust
-Gust of Wind
-Hail of Thorns
-Hallow
-Hallucinatory Terrain
-Harm
-Haste
-Heal
-Healing Spirit
-Healing Word
-Heat Metal
-Hellish Rebuke
-Heroes' Feast
-Heroism
-Hex
-Hideous Laughter
-Hold Monster
-Hold Person
-Holy Aura
-Holy Weapon
-Hunger of Hadar
-Hunter's Mark
-Hypnotic Pattern
-Ice Knife
-Ice Storm
-Identify
-Illusory Dragon
-Illusory Script
-Immolation
-Immovable Object
-Imprisonment
-Incendiary Cloud
-Incite Greed
-Infernal Calling
-Infestation
-Inflict Wounds
-Insect Plague
-Instant Summons
-Intellect Fortress
-Investiture of Flame
-Investiture of Ice
-Investiture of Stone
-Investiture of Wind
-Invisibility
-Invulnerability
-Jim’s Glowing Coin
-Jim’s Magic Missile
-Jump
-Kinetic Jaunt
-Knock
-Legend Lore
-Leomund’s Secret Chest
-Leomund’s Tiny Hut
-Lesser Restoration
-Levitate
-Life Transference
-Light
-Lightning Arrow
-Lightning Bolt
-Lightning Lure
-Locate Animals or Plants
-Locate Creature
-Locate Object
-Longstrider
-Maddening Darkness
-Maelstrom
-Mage Armor
-Mage Hand
-Magic Circle
-Magic Jar
-Magic Missile
-Magic Mouth
-Magic Stone
-Magic Weapon
-Magnificent Mansion
-Magnify Gravity
-Major Image
-Mass Cure Wounds
-Mass Heal
-Mass Healing Word
-Mass Polymorph
-Mass Suggestion
-Maximilian’s Earthen Grasp
-Maze
-Meld into Stone
-Melf’s Acid Arrow
-Melf's Minute Meteors
-Mending
-Mental Prison
-Message
-Meteor Swarm
-Mighty Fortress
-Mind Blank
-Mind Sliver
-Mind Spike
-Minor Illusion
-Mirage Arcane
-Mirror Image
-Mislead
-Misty Step
-Modify Memory
-Mold Earth
-Moonbeam
-Mordenkainen’s Faithful Hound
-Mordenkainen’s Magnificent Mansion
-Mordenkainen’s Private Sanctum
-Mordenkainen’s Sword
-Motivational Speech
-Move Earth
-Nathair’s Mischief
-Negative Energy Flood
-Nondetection
-Nystul’s Magic Aura
-Otiluke’s Resilient Sphere
-Otiluke's Freezing Sphere
-Otto's Irresistible Dance
-Pass without Trace
-Passwall
-Phantasmal Force
-Phantasmal Killer
-Phantom Steed
-Planar Ally
-Planar Binding
-Plane Shift
-Plant Growth
-Poison Spray
-Polymorph
-Power Word Heal
-Power Word Kill
-Power Word Pain
-Power Word Stun
-Prayer of Healing
-Prestidigitation
-Primal Savagery
-Primordial Ward
-Prismatic Spray
-Prismatic Wall
-Private Sanctum
-Produce Flame
-Programmed Illusion
-Project Image
-Protection from Energy
-Protection from Evil and Good
-Protection from Poison
-Psychic Scream
-Pulse Wave
-Purify Food and Drink
-Pyrotechnics
-Raise Dead
-Rary's Telepathic Bond
-Raulothim's Psychic Lance
-Ravenous Void
-Ray of Enfeeblement
-Ray of Frost
-Ray of Sickness
-Reality Break
-Regenerate
-Reincarnate
-Remove Curse
-Resilient Sphere
-Resistance
-Resurrection
-Reverse Gravity
-Revivify
-Rime’s Binding Ice
-Rope Trick
-Sacred Flame
-Sanctuary
-Sapping Sting
-Scatter
-Scorching Ray
-Scrying
-Searing Smite
-Secret Chest
-See Invisibility
-Seeming
-Sending
-Sequester
-Shadow Blade
-Shadow of Moil
-Shape Water
-Shapechange
-Shatter
-Shield
-Shield of Faith
-Shillelagh
-Shocking Grasp
-Sickening Radiance
-Silence
-Silent Image
-Silvery Barbs
-Simulacrum
-Skill Empowerment
-Skywrite
-Sleep
-Sleet Storm
-Slow
-Snare
-Snilloc’s Snowball Swarm
-Soul Cage
-Spare the Dying
-Speak with Animals
-Speak with Dead
-Speak with Plants
-Spider Climb
-Spike Growth
-Spirit Guardians
-Spirit Shroud
-Spiritual Weapon
-Staggering Smite
-Steel Wind Strike
-Stinking Cloud
-Stone Shape
-Stoneskin
-Storm of Vengeance
-Storm Sphere
-Suggestion
-Summon Aberration
-Summon Beast
-Summon Celestial
-Summon Construct
-Summon Draconic Spirit
-Summon Elemental
-Summon Fey
-Summon Fiend
-Summon Greater Demon
-Summon Lesser Demons
-Summon Shadowspawn
-Summon Undead
-Sunbeam
-Sunburst
-Swift Quiver
-Sword Burst
-Symbol
-Synaptic Static
-Tasha’s Hideous Laughter
-Tasha's Caustic Brew
-Tasha's Mind Whip
-Tasha's Otherworldly Guise
-Telekinesis
-Telepathic Bond
-Telepathy
-Teleport
-Teleportation Circle
-Temple of the Gods
-Temporal Shunt
-Tenser’s Floating Disk
-Tenser’s Transformation
-Tether Essence
-Thaumaturgy
-Thorn Whip
-Thunder Step
-Thunderclap
-Thunderous Smite
-Thunderwave
-Tidal Wave
-Time Ravage
-Time Stop
-Tiny Hut
-Tiny Servant
-Toll the Dead
-Tongues
-Transmute Rock
-Transport via Plants
-Tree Stride
-True Polymorph
-True Resurrection
-True Seeing
-True Strike
-Tsunami
-Unseen Servant
-Vampiric Touch
-Vicious Mockery
-Vitriolic Sphere
-Vortex Warp
-Wall of Fire
-Wall of Force
-Wall of Ice
-Wall of Light
-Wall of Sand
-Wall of Stone
-Wall of Thorns
-Wall of Water
-Warding Bond
-Warding Wind
-Water Breathing
-Water Walk
-Watery Sphere
-Web
-Weird
-Whirlwind
-Wind Walk
-Wind Wall
-Wish
-Witch Bolt
-Wither and Bloom
-Word of Radiance
-Word of Recall
-Wrath of Nature
-Wrathful Smite
-Wristpocket
-Zephyr Strike
-Zone of Truth`;
-
-const spells = spellString
-  .toLowerCase()
-  .split(/\r?\n/)
-  .join(",")
-  .split(`\n`)
-  .join(",")
-  .split(",")
-  .filter(Boolean);
+const spells = [
+  "abi-dalzim’s horrid wilting",
+  "absorb elements",
+  "acid arrow",
+  "acid splash",
+  "aganazzar’s scorcher",
+  "aid",
+  "air bubble",
+  "alarm",
+  "alter self",
+  "animal friendship",
+  "animal messenger",
+  "animal shapes",
+  "animate dead",
+  "animate objects",
+  "antilife shell",
+  "antimagic field",
+  "antipathy/sympathy",
+  "arcane eye",
+  "arcane gate",
+  "arcane hand",
+  "arcane lock",
+  "arcanist's magic aura",
+  "armor of agathys",
+  "arms of hadar",
+  "ashardalon’s stride",
+  "astral projection",
+  "augury",
+  "aura of life",
+  "aura of purity",
+  "aura of vitality",
+  "awaken",
+  "bane",
+  "banishing smite",
+  "banishment",
+  "barkskin",
+  "beacon of hope",
+  "beast bond",
+  "beast sense",
+  "bestow curse",
+  "bigby's hand",
+  "black tentacles",
+  "blade barrier",
+  "blade of disaster",
+  "blade ward",
+  "bless",
+  "blight",
+  "blinding smite",
+  "blindness/deafness",
+  "blink",
+  "blur",
+  "bones of the earth",
+  "booming blade",
+  "borrowed knowledge",
+  "branding smite",
+  "burning hands",
+  "call lightning",
+  "calm emotions",
+  "catapult",
+  "catnap",
+  "cause fear",
+  "ceremony",
+  "chain lightning",
+  "chaos bolt",
+  "charm monster",
+  "charm person",
+  "chill touch",
+  "chromatic orb",
+  "circle of death",
+  "circle of power",
+  "clairvoyance",
+  "clone",
+  "cloud of daggers",
+  "cloudkill",
+  "color spray",
+  "command",
+  "commune",
+  "commune with nature",
+  "compelled duel",
+  "comprehend languages",
+  "compulsion",
+  "cone of cold",
+  "confusion",
+  "conjure animals",
+  "conjure barrage",
+  "conjure celestial",
+  "conjure elemental",
+  "conjure fey",
+  "conjure minor elementals",
+  "conjure volley",
+  "conjure woodland beings",
+  "contact other plane",
+  "contagion",
+  "contingency",
+  "continual flame",
+  "control flames",
+  "control water",
+  "control weather",
+  "control winds",
+  "cordon of arrows",
+  "counterspell",
+  "create bonfire",
+  "create food and water",
+  "create homunculus",
+  "create magen",
+  "create or destroy water",
+  "create spelljamming helm",
+  "create undead",
+  "creation",
+  "crown of madness",
+  "crown of stars",
+  "crusader’s mantle",
+  "cure wounds",
+  "dancing lights",
+  "danse macabre",
+  "dark star",
+  "darkness",
+  "darkvision",
+  "dawn",
+  "daylight",
+  "death ward",
+  "delayed blast fireball",
+  "demiplane",
+  "destructive wave",
+  "detect evil and good",
+  "detect magic",
+  "detect poison and disease",
+  "detect thoughts",
+  "dimension door",
+  "disguise self",
+  "disintegrate",
+  "dispel evil and good",
+  "dispel magic",
+  "dissonant whispers",
+  "distort value",
+  "divination",
+  "divine favor",
+  "divine word",
+  "dominate beast",
+  "dominate monster",
+  "dominate person",
+  "draconic transformation",
+  "dragon's breath",
+  "drawmij's instant summons",
+  "dream",
+  "dream of the blue veil",
+  "druid grove",
+  "druidcraft",
+  "dust devil",
+  "earth tremor",
+  "earthbind",
+  "earthquake",
+  "eldritch blast",
+  "elemental bane",
+  "elemental weapon",
+  "encode thoughts",
+  "enemies abound",
+  "enervation",
+  "enhance ability",
+  "enlarge/reduce",
+  "ensnaring strike",
+  "entangle",
+  "enthrall",
+  "erupting earth",
+  "etherealness",
+  "evard’s black tentacles",
+  "expeditious retreat",
+  "eyebite",
+  "fabricate",
+  "faerie fire",
+  "faithful hound",
+  "false life",
+  "far step",
+  "fast friends",
+  "fear",
+  "feather fall",
+  "feeblemind",
+  "feign death",
+  "find familiar",
+  "find greater steed",
+  "find steed",
+  "find the path",
+  "find traps",
+  "finger of death",
+  "fire bolt",
+  "fire shield",
+  "fire storm",
+  "fireball",
+  "fizban's platinum shield",
+  "flame arrows",
+  "flame blade",
+  "flame strike",
+  "flaming sphere",
+  "flesh to stone",
+  "floating disk",
+  "flock of familiars",
+  "fly",
+  "fog cloud",
+  "forbiddance",
+  "forcecage",
+  "foresight",
+  "fortune's favor",
+  "freedom of movement",
+  "freedom of the waves",
+  "freedom of the winds",
+  "freezing sphere",
+  "friends",
+  "frost fingers",
+  "frostbite",
+  "galder’s speedy courier",
+  "galder’s tower",
+  "gaseous form",
+  "gate",
+  "geas",
+  "gentle repose",
+  "giant insect",
+  "gift of alacrity",
+  "gift of gab",
+  "glibness",
+  "globe of invulnerability",
+  "glyph of warding",
+  "goodberry",
+  "grasping vine",
+  "gravity fissure",
+  "gravity sinkhole",
+  "grease",
+  "greater invisibility",
+  "greater restoration",
+  "green-flame blade",
+  "guardian of faith",
+  "guardian of nature",
+  "guards and wards",
+  "guidance",
+  "guiding bolt",
+  "gust",
+  "gust of wind",
+  "hail of thorns",
+  "hallow",
+  "hallucinatory terrain",
+  "harm",
+  "haste",
+  "heal",
+  "healing spirit",
+  "healing word",
+  "heat metal",
+  "hellish rebuke",
+  "heroes' feast",
+  "heroism",
+  "hex",
+  "hideous laughter",
+  "hold monster",
+  "hold person",
+  "holy aura",
+  "holy weapon",
+  "hunger of hadar",
+  "hunter's mark",
+  "hypnotic pattern",
+  "ice knife",
+  "ice storm",
+  "identify",
+  "illusory dragon",
+  "illusory script",
+  "immolation",
+  "immovable object",
+  "imprisonment",
+  "incendiary cloud",
+  "incite greed",
+  "infernal calling",
+  "infestation",
+  "inflict wounds",
+  "insect plague",
+  "instant summons",
+  "intellect fortress",
+  "investiture of flame",
+  "investiture of ice",
+  "investiture of stone",
+  "investiture of wind",
+  "invisibility",
+  "invulnerability",
+  "jim’s glowing coin",
+  "jim’s magic missile",
+  "jump",
+  "kinetic jaunt",
+  "knock",
+  "legend lore",
+  "leomund’s secret chest",
+  "leomund’s tiny hut",
+  "lesser restoration",
+  "levitate",
+  "life transference",
+  "light",
+  "lightning arrow",
+  "lightning bolt",
+  "lightning lure",
+  "locate animals or plants",
+  "locate creature",
+  "locate object",
+  "longstrider",
+  "maddening darkness",
+  "maelstrom",
+  "mage armor",
+  "mage hand",
+  "magic circle",
+  "magic jar",
+  "magic missile",
+  "magic mouth",
+  "magic stone",
+  "magic weapon",
+  "magnificent mansion",
+  "magnify gravity",
+  "major image",
+  "mass cure wounds",
+  "mass heal",
+  "mass healing word",
+  "mass polymorph",
+  "mass suggestion",
+  "maximilian’s earthen grasp",
+  "maze",
+  "meld into stone",
+  "melf’s acid arrow",
+  "melf's minute meteors",
+  "mending",
+  "mental prison",
+  "message",
+  "meteor swarm",
+  "mighty fortress",
+  "mind blank",
+  "mind sliver",
+  "mind spike",
+  "minor illusion",
+  "mirage arcane",
+  "mirror image",
+  "mislead",
+  "misty step",
+  "modify memory",
+  "mold earth",
+  "moonbeam",
+  "mordenkainen’s faithful hound",
+  "mordenkainen’s magnificent mansion",
+  "mordenkainen’s private sanctum",
+  "mordenkainen’s sword",
+  "motivational speech",
+  "move earth",
+  "nathair’s mischief",
+  "negative energy flood",
+  "nondetection",
+  "nystul’s magic aura",
+  "otiluke’s resilient sphere",
+  "otiluke's freezing sphere",
+  "otto's irresistible dance",
+  "pass without trace",
+  "passwall",
+  "phantasmal force",
+  "phantasmal killer",
+  "phantom steed",
+  "planar ally",
+  "planar binding",
+  "plane shift",
+  "plant growth",
+  "poison spray",
+  "polymorph",
+  "power word heal",
+  "power word kill",
+  "power word pain",
+  "power word stun",
+  "prayer of healing",
+  "prestidigitation",
+  "primal savagery",
+  "primordial ward",
+  "prismatic spray",
+  "prismatic wall",
+  "private sanctum",
+  "produce flame",
+  "programmed illusion",
+  "project image",
+  "protection from energy",
+  "protection from evil and good",
+  "protection from poison",
+  "psychic scream",
+  "pulse wave",
+  "purify food and drink",
+  "pyrotechnics",
+  "raise dead",
+  "rary's telepathic bond",
+  "raulothim's psychic lance",
+  "ravenous void",
+  "ray of enfeeblement",
+  "ray of frost",
+  "ray of sickness",
+  "reality break",
+  "regenerate",
+  "reincarnate",
+  "remove curse",
+  "resilient sphere",
+  "resistance",
+  "resurrection",
+  "reverse gravity",
+  "revivify",
+  "rime’s binding ice",
+  "rope trick",
+  "sacred flame",
+  "sanctuary",
+  "sapping sting",
+  "scatter",
+  "scorching ray",
+  "scrying",
+  "searing smite",
+  "secret chest",
+  "see invisibility",
+  "seeming",
+  "sending",
+  "sequester",
+  "shadow blade",
+  "shadow of moil",
+  "shape water",
+  "shapechange",
+  "shatter",
+  "shield",
+  "shield of faith",
+  "shillelagh",
+  "shocking grasp",
+  "sickening radiance",
+  "silence",
+  "silent image",
+  "silvery barbs",
+  "simulacrum",
+  "skill empowerment",
+  "skywrite",
+  "sleep",
+  "sleet storm",
+  "slow",
+  "snare",
+  "snilloc’s snowball swarm",
+  "soul cage",
+  "spare the dying",
+  "speak with animals",
+  "speak with dead",
+  "speak with plants",
+  "spider climb",
+  "spike growth",
+  "spirit guardians",
+  "spirit shroud",
+  "spiritual weapon",
+  "staggering smite",
+  "steel wind strike",
+  "stinking cloud",
+  "stone shape",
+  "stoneskin",
+  "storm of vengeance",
+  "storm sphere",
+  "suggestion",
+  "summon aberration",
+  "summon beast",
+  "summon celestial",
+  "summon construct",
+  "summon draconic spirit",
+  "summon elemental",
+  "summon fey",
+  "summon fiend",
+  "summon greater demon",
+  "summon lesser demons",
+  "summon shadowspawn",
+  "summon undead",
+  "sunbeam",
+  "sunburst",
+  "swift quiver",
+  "sword burst",
+  "symbol",
+  "synaptic static",
+  "tasha’s hideous laughter",
+  "tasha's caustic brew",
+  "tasha's mind whip",
+  "tasha's otherworldly guise",
+  "telekinesis",
+  "telepathic bond",
+  "telepathy",
+  "teleport",
+  "teleportation circle",
+  "temple of the gods",
+  "temporal shunt",
+  "tenser’s floating disk",
+  "tenser’s transformation",
+  "tether essence",
+  "thaumaturgy",
+  "thorn whip",
+  "thunder step",
+  "thunderclap",
+  "thunderous smite",
+  "thunderwave",
+  "tidal wave",
+  "time ravage",
+  "time stop",
+  "tiny hut",
+  "tiny servant",
+  "toll the dead",
+  "tongues",
+  "transmute rock",
+  "transport via plants",
+  "tree stride",
+  "true polymorph",
+  "true resurrection",
+  "true seeing",
+  "true strike",
+  "tsunami",
+  "unseen servant",
+  "vampiric touch",
+  "vicious mockery",
+  "vitriolic sphere",
+  "vortex warp",
+  "wall of fire",
+  "wall of force",
+  "wall of ice",
+  "wall of light",
+  "wall of sand",
+  "wall of stone",
+  "wall of thorns",
+  "wall of water",
+  "warding bond",
+  "warding wind",
+  "water breathing",
+  "water walk",
+  "watery sphere",
+  "web",
+  "weird",
+  "whirlwind",
+  "wind walk",
+  "wind wall",
+  "wish",
+  "witch bolt",
+  "wither and bloom",
+  "word of radiance",
+  "word of recall",
+  "wrath of nature",
+  "wrathful smite",
+  "wristpocket",
+  "zephyr strike",
+  "zone of truth",
+];
 
 const conditions = [
   "charmed",
