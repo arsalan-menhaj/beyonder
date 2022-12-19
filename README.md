@@ -6,3 +6,7 @@ All you need to do is input any text that follows the standard syntax of a 5E st
 
 
 Created using Svelte, and published via Netlify to https://beyonder.netlify.app/.
+
+Planned Improvements:
+* (Bug) Parse spells that are more than two words in length.
+* Add remaining [supported tooltips](https://www.dndbeyond.com/forums/dungeons-dragons-discussion/homebrew-house-rules/9811-how-to-add-tooltips).
