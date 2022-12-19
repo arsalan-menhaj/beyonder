@@ -1,4 +1,4 @@
-# beyonder
+# Beyonder
 
 A free little web-app to make it easier to create homebrew monsters through DnDBeyond. 
 
