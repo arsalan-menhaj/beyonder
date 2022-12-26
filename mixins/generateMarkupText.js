@@ -19,17 +19,6 @@ const generateMarkupText = (input) => {
             return `[condition]${element}[/condition]`;
           }
 
-          // spells
-          if (keywords.spells.includes(element)) {
-            return `[spell]${element}[/spell]`;
-          }
-
-          // spells with multiple words
-          if (keywords.spells.includes(element + " " + elements[index + 2])) {
-            skipNext = 2;
-            return `[spell]${element + " " + elements[index + 2]}[/spell]`;
-          }
-
           // set weapon and damage type for the next attack roll
           for (let type in keywords.weapons) {
             if (keywords.weapons[type].includes(element.toLowerCase())) {
@@ -89,6 +78,23 @@ const generateMarkupText = (input) => {
 
             expression += `","rollType":"damage","rollAction":"${currentWeapon}","rollDamageType":"${currentDamageType}"}[/rollable] `;
             return startingExpression + expression;
+          }
+
+          // spells
+          let currentSpell = '';
+          keywords.spells.forEach(spell => {
+            const spellElements = spell.split(' ');
+            const elementArrayLength = (2 * spellElements.length) - 1; // to account for spaces
+
+            if (spellElements[0] === element && spellElements[spellElements.length - 1] === elements[index + elementArrayLength - 1]) {
+              skipNext += elementArrayLength - 1;
+              currentSpell = spell;
+            }
+          })
+
+          if (currentSpell)
+          {
+            return `[spell]${currentSpell}[/spell]`;
           }
 
           return element;

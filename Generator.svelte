@@ -6,8 +6,8 @@
 Greatsword. Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage.
 
 Spellcasting. The archon casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save DC 14):
-At will: aid, continual flame,
-1/day: magic circle`;
+At will: aid, continual flame
+1/day: magic circle, purify food and drink`;
 </script>
 
 <style>
@@ -50,6 +50,6 @@ At will: aid, continual flame,
   
   <div>
     <p>Output:</p>
-    <div class=static><i>{generateMarkupText(inputText)}</i></div>
+    <div class=static>{generateMarkupText(inputText)}</div>
   </div>
 </span>
